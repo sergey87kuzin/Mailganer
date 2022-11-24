@@ -68,7 +68,6 @@ def mailing_list():
 
 def check_mail(mail):
     regexp = '(@\w+\.\w+)'
-    print(re.findall(regexp, mail))
     if len(re.findall(regexp, mail)) == 0:
         raise ValueError('wrong mail {email}'.format(email=mail))
 
